@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import ipc from '@/lib/ipc';
+import zaloXLogo from '@/assets/zalo-x-logo.png';
 
 const SUPPORT_GITHUB_URL = 'https://github.com/adamwang99/Zalo-X';
 import { useAppStore } from '@/store/appStore';
@@ -145,6 +146,7 @@ export default function TopBar() {
       style={{ WebkitAppRegion: 'drag', background: 'linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03))', borderBottom: '1px solid var(--glass-line)', backdropFilter: 'blur(16px) saturate(150%)', WebkitBackdropFilter: 'blur(16px) saturate(150%)' } as any}
     >
       <div className="flex items-center gap-2 px-3" style={{ WebkitAppRegion: 'no-drag' } as any}>
+        <img src={zaloXLogo} alt="Zalo-X" className="w-4 h-4 rounded object-contain" />
         <span className="font-bold text-sm" style={{ background: 'linear-gradient(135deg, #9f8cff, #67ddff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Zalo-X</span>
         <span className="text-gray-500 text-xs">v{APP_VERSION}</span>
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import zaloXLogo from '@/assets/zalo-x-logo.png';
 
 type FeatureId =
   | 'overview'
@@ -94,7 +95,7 @@ function OverviewPanel() {
   return (
     <div className="space-y-4">
       <div className="flex items-start gap-3">
-        <span className="text-4xl leading-none">🤖</span>
+        <img src={zaloXLogo} alt="Zalo-X" className="w-12 h-12 rounded-2xl object-contain flex-shrink-0" />
         <div>
           <h3 className="text-white font-bold text-base">Zalo-X</h3>
           <p className="text-gray-400 text-xs mt-0.5">Nền tảng vận hành bán hàng nội bộ: chat đa kênh, CRM, ERP, workflow và AI trên desktop</p>

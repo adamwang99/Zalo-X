@@ -1,5 +1,9 @@
 # Zalo-X
 
+<p align="center">
+  <img src="./resources/brand/zalo-x-logo.png" alt="Zalo-X" width="128" height="128" />
+</p>
+
 <p>
   <strong>🌐 Language:</strong>
   &nbsp;🇻🇳 <a href="./README.md">Tiếng Việt</a>
