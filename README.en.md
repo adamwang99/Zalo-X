@@ -1,9 +1,5 @@
 # Zalo-X
 
-> **📌 Attribution / Ghi chú nguồn**
-> **Zalo-X** is built on top of the open-source project [`babyvibe/deplao-builder`](https://github.com/babyvibe/deplao-builder).
-> Huge **thanks to the original author [@babyvibe](https://github.com/babyvibe)** for sharing the upstream project with the community. 🙏
-
 <p>
   <strong>🌐 Language:</strong>
   &nbsp;🇻🇳 <a href="./README.md">Tiếng Việt</a>
@@ -459,5 +455,7 @@ Zalo-X prioritizes a local-first architecture:
 
 Zalo-X would like to thank the project: 👉 https://github.com/RFS-ADRENO/zca-js
 Without the contributions and foundation from this project, Zalo-X would not have been possible. We deeply appreciate the value the open-source community brings 💙
+
+Sincere thanks to the original author [@babyvibe](https://github.com/babyvibe) for sharing the upstream project with the community. 🙏
 
 ---
