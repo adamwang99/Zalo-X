@@ -3,7 +3,6 @@
 > **📌 Ghi chú nguồn / Attribution**
 > Dự án **Zalo-X** được xây dựng dựa trên mã nguồn mở [`babyvibe/deplao-builder`](https://github.com/babyvibe/deplao-builder).
 > Xin chân thành **cảm ơn tác giả [@babyvibe](https://github.com/babyvibe)** đã chia sẻ dự án gốc cho cộng đồng. 🙏
-> Mọi công lao thiết kế và phát triển nền tảng thuộc về tác giả gốc; Zalo-X chỉ là bản đổi tên/tùy biến phục vụ nhu cầu nội bộ.
 
 <p>
   <strong>🌐 Language:</strong>
