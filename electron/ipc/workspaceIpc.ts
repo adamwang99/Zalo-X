@@ -145,7 +145,7 @@ export function registerWorkspaceIpc(mainWindow: BrowserWindow | null): void {
                 const newActiveWs = wm().getActiveWorkspace();
                 if (newActiveWs) {
                     AppModeManager.getInstance().clearOverride();
-                    const newDbPath = wm().resolveDbPath(newActiveWs.dbPath || 'deplao-tool.db');
+                    const newDbPath = wm().resolveDbPath(newActiveWs.dbPath || 'zalox-tool.db');
                     await DatabaseService.getInstance().switchToWorkspaceDb(newDbPath);
                     FileStorageService.resetBaseDir();
 
@@ -182,7 +182,7 @@ export function registerWorkspaceIpc(mainWindow: BrowserWindow | null): void {
                 EventBroadcaster.clearBeforeSendHooks();
 
                 // Switch DatabaseService to the new workspace's DB
-                const newDbPath = wm().resolveDbPath(result.workspace.dbPath || 'deplao-tool.db');
+                const newDbPath = wm().resolveDbPath(result.workspace.dbPath || 'zalox-tool.db');
                 await DatabaseService.getInstance().switchToWorkspaceDb(newDbPath);
 
                 // Reset FileStorageService cache so media resolves to the new workspace's folder
@@ -271,7 +271,7 @@ export function registerWorkspaceIpc(mainWindow: BrowserWindow | null): void {
         try {
             const ws = wm().getWorkspaceById(id);
             if (!ws) return { success: false, error: 'Workspace not found' };
-            const dbPath = wm().resolveDbPath(ws.dbPath || 'deplao-tool.db');
+            const dbPath = wm().resolveDbPath(ws.dbPath || 'zalox-tool.db');
             return { success: true, dbPath };
         } catch (err: any) {
             return { success: false, error: err.message };

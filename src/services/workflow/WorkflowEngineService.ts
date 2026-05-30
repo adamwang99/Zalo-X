@@ -1432,7 +1432,7 @@ class WorkflowEngineService {
       case 'notify.discord': {
         const payload: Record<string, any> = {
           content: cfg.message,
-          username: cfg.username || 'DepLao Bot',
+          username: cfg.username || 'Zalo-X Bot',
         };
         if (cfg.avatarUrl) payload.avatar_url = cfg.avatarUrl;
         await axios.post(cfg.webhookUrl, payload, { timeout: 10000 });
@@ -1961,7 +1961,7 @@ class WorkflowEngineService {
    * Download a URL to a temporary file. Returns the local temp file path.
    */
   private async downloadUrlToTempFile(url: string): Promise<string> {
-    const tmpDir = path.join(os.tmpdir(), 'deplao-workflow-images');
+    const tmpDir = path.join(os.tmpdir(), 'zalox-workflow-images');
     if (!fs.existsSync(tmpDir)) fs.mkdirSync(tmpDir, { recursive: true });
 
     // Extract extension from URL or default to .jpg

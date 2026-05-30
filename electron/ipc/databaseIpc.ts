@@ -196,7 +196,7 @@ export function registerDatabaseIpc() {
     ipcMain.handle('db:getStoragePath', async () => {
         try {
             const userDataPath = app.getPath('userData');
-            const configPath = path.join(userDataPath, 'deplao-config.json');
+            const configPath = path.join(userDataPath, 'zalox-config.json');
             let customPath: string | null = null;
             if (fs.existsSync(configPath)) {
                 try {
@@ -225,9 +225,9 @@ export function registerDatabaseIpc() {
                 fs.mkdirSync(newFolder, { recursive: true });
             }
 
-            const configPath = path.join(app.getPath('userData'), 'deplao-config.json');
+            const configPath = path.join(app.getPath('userData'), 'zalox-config.json');
             const oldDbPath = DatabaseService.getInstance().getDbPath();
-            const newDbPath = path.join(newFolder, 'deplao-tool.db');
+            const newDbPath = path.join(newFolder, 'zalox-tool.db');
 
             if (oldDbPath === newDbPath) {
                 return { success: true, newPath: newDbPath, message: 'Thư mục không thay đổi.' };
@@ -356,7 +356,7 @@ export function registerDatabaseIpc() {
                 return { success: true, canceled: true };
             }
             const folder = result.filePaths[0];
-            const dbFilePath = path.join(folder, 'deplao-tool.db');
+            const dbFilePath = path.join(folder, 'zalox-tool.db');
             const hasExistingData = fs.existsSync(dbFilePath);
             return { success: true, canceled: false, folder, hasExistingData };
         } catch (error: any) {

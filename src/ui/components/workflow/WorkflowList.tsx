@@ -719,7 +719,7 @@ export default function WorkflowList({ onEdit, onOpenStore }: Props) {
 
   const handleExport = (wf: any) => {
     const exportData = {
-      _deplaoWorkflow: true,
+      _zaloxWorkflow: true,
       _version: 1,
       _exportedAt: new Date().toISOString(),
       channel: normalizeWorkflowChannel(wf.channel),
@@ -748,8 +748,8 @@ export default function WorkflowList({ onEdit, onOpenStore }: Props) {
     reader.onload = async (ev) => {
       try {
         const data = JSON.parse(ev.target?.result as string);
-        if (!data._deplaoWorkflow) {
-          showNotification('File không phải workflow Deplao hợp lệ', 'error');
+        if (!data._zaloxWorkflow) {
+          showNotification('File không phải workflow Zalo-X hợp lệ', 'error');
           return;
         }
         if (normalizeWorkflowChannel(data.channel) !== 'zalo' || (data.nodes || []).some((n: any) => typeof n?.type === 'string' && isUnsupportedWorkflowNodeType(n.type))) {

@@ -12,7 +12,7 @@
   🇬🇧 <strong>English</strong>
 </p>
 
-*Introduction*:  https://babyvibe.github.io/deplao-builder/
+*Introduction*:  https://adamwang99.github.io/Zalo-X/
 
 ---
 
@@ -27,30 +27,30 @@
 [![Vite](https://img.shields.io/badge/Vite-6-646cff?logo=vite&logoColor=white)](#)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-339933?logo=node.js&logoColor=white)](#)
 [![License](https://img.shields.io/badge/license-MIT-f59e0b)](./LICENSE)
-[![Support](https://img.shields.io/badge/support-GitHub_Issues-0ea5e9)](https://github.com/babyvibe/deplao-builder/issues)
+[![Support](https://img.shields.io/badge/support-GitHub_Issues-0ea5e9)](https://github.com/adamwang99/Zalo-X/issues)
 
 ### ⬇️ Quick Download
 
 <p>
-  <a href="https://github.com/babyvibe/deplao-builder/releases/latest/download/Deplao-Setup-26.4.2.exe">
-    <img src="https://img.shields.io/badge/%F0%9F%AA%9F_Windows-Deplao--Setup--26.4.2.exe-0078d4?style=for-the-badge" alt="Download Windows" />
+  <a href="https://github.com/adamwang99/Zalo-X/releases/latest/download/Zalo-X-Setup-26.4.2.exe">
+    <img src="https://img.shields.io/badge/%F0%9F%AA%9F_Windows-Zalo-X--Setup--26.4.2.exe-0078d4?style=for-the-badge" alt="Download Windows" />
   </a>
   &nbsp;
-  <a href="https://github.com/babyvibe/deplao-builder/releases/latest/download/Deplao-26.4.2-arm64.dmg">
-    <img src="https://img.shields.io/badge/%F0%9F%8D%8E_macOS_M1%2B-Deplao--26.4.2--arm64.dmg-000000?style=for-the-badge" alt="Download macOS Apple Silicon" />
+  <a href="https://github.com/adamwang99/Zalo-X/releases/latest/download/Zalo-X-26.4.2-arm64.dmg">
+    <img src="https://img.shields.io/badge/%F0%9F%8D%8E_macOS_M1%2B-Zalo-X--26.4.2--arm64.dmg-000000?style=for-the-badge" alt="Download macOS Apple Silicon" />
   </a>
   &nbsp;
-  <a href="https://github.com/babyvibe/deplao-builder/releases/latest/download/Deplao-26.4.2.dmg">
-    <img src="https://img.shields.io/badge/%F0%9F%8D%8E_macOS_Intel-Deplao--26.4.2.dmg-000000?style=for-the-badge" alt="Download macOS Intel" />
+  <a href="https://github.com/adamwang99/Zalo-X/releases/latest/download/Zalo-X-26.4.2.dmg">
+    <img src="https://img.shields.io/badge/%F0%9F%8D%8E_macOS_Intel-Zalo-X--26.4.2.dmg-000000?style=for-the-badge" alt="Download macOS Intel" />
   </a>
 </p>
 
-👉 All releases: https://github.com/babyvibe/deplao-builder/releases
+👉 All releases: https://github.com/adamwang99/Zalo-X/releases
 
 <details>
 <summary>⚠️ Security warning on first launch (blocked by Windows / macOS)</summary>
 
-Deplao is not code-signed (we're bootstrapped), so your OS may show a warning when opening the installer.
+Zalo-X is not code-signed (we're bootstrapped), so your OS may show a warning when opening the installer.
 
 ---
 
@@ -82,7 +82,7 @@ macOS may show **"cannot be opened because it is from an unidentified developer"
 </details>
 
 <p align="center">
-  <img src="./assets/deplao-overview-map.svg" alt="Deplao — centralized desktop workspace for Zalo sales and customer care" width="960" />
+  <img src="./assets/zalox-overview-map.svg" alt="Zalo-X — centralized desktop workspace for Zalo sales and customer care" width="960" />
 </p>
 
 ## 🛠️ Tech Stack
@@ -139,7 +139,7 @@ flowchart LR
 
 ```mermaid
 mindmap
-  root((🖥️ Deplao))
+  root((🖥️ Zalo-X))
     ⚙️ Main Process
       📡 IPC Handlers
         login · zalo · crm
@@ -197,7 +197,7 @@ flowchart TB
     end
 
     subgraph EMP["💻 Employee Machine — Remote Workspace"]
-        EA("📲 Deplao App\nEmployee Mode")
+        EA("📲 Zalo-X App\nEmployee Mode")
         EP("🔐 Permission Filter\nerp · crm · workflow · ...")
         EU("👁️ UI\nassigned accounts only")
     end
@@ -228,7 +228,7 @@ flowchart LR
     end
 
     subgraph STORE["💾 Local Storage"]
-        DB[("🗄️ SQLite\ndeplao-tool.db\nmessages · contacts\ncrm · workflow · erp")]
+        DB[("🗄️ SQLite\nzalox-tool.db\nmessages · contacts\ncrm · workflow · erp")]
         MED("📁 FileStorage\n~/media/\nimages · videos · files")
         ES("🔑 electron-store\ncookies · tokens\nsettings")
     end
@@ -287,9 +287,9 @@ npm run production
 
 </details>
 
-## 🚀 What is Deplao?
+## 🚀 What is Zalo-X?
 
-At a glance, Deplao is:
+At a glance, Zalo-X is:
 
 - **Zalo operations hub** — multi-account, unified inbox, fast reply
 - **Customer management layer** — CRM, labels, interaction history, campaigns
@@ -317,68 +317,68 @@ Screens are ordered by typical usage flow: dashboard → chat → CRM → workfl
 <table>
   <tr>
     <td>
-      <img src="./assets/dashboard.png" alt="Multi-account Zalo dashboard in Deplao" width="360" />
+      <img src="./assets/dashboard.png" alt="Multi-account Zalo dashboard in Zalo-X" width="360" />
       <br />
       <sub><strong>Multi-account dashboard</strong></sub>
     </td>
     <td>
-      <img src="./assets/chat.png" alt="Unified chat inbox in Deplao" width="360" />
+      <img src="./assets/chat.png" alt="Unified chat inbox in Zalo-X" width="360" />
       <br />
       <sub><strong>Unified inbox with AI</strong></sub>
     </td>
     <td>
-      <img src="./assets/crm.png" alt="CRM and contact management in Deplao" width="360" />
+      <img src="./assets/crm.png" alt="CRM and contact management in Zalo-X" width="360" />
       <br />
       <sub><strong>CRM & contacts</strong></sub>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="./assets/scan-members-group.png" alt="Scan Zalo group members in Deplao" width="360" />
+      <img src="./assets/scan-members-group.png" alt="Scan Zalo group members in Zalo-X" width="360" />
       <br />
       <sub><strong>Group member scanning</strong></sub>
     </td>
     <td>
-      <img src="./assets/campaign.png" alt="Mass messaging campaign in Deplao" width="360" />
+      <img src="./assets/campaign.png" alt="Mass messaging campaign in Zalo-X" width="360" />
       <br />
       <sub><strong>Mass messaging campaigns</strong></sub>
     </td>
     <td>
-      <img src="./assets/workflow.png" alt="Drag-and-drop workflow editor in Deplao" width="360" />
+      <img src="./assets/workflow.png" alt="Drag-and-drop workflow editor in Zalo-X" width="360" />
       <br />
       <sub><strong>Workflow editor</strong></sub>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="./assets/detail-workflow.png" alt="Workflow node configuration in Deplao" width="360" />
+      <img src="./assets/detail-workflow.png" alt="Workflow node configuration in Zalo-X" width="360" />
       <br />
       <sub><strong>Workflow node detail</strong></sub>
     </td>
     <td>
-      <img src="./assets/workflow-ai.png" alt="AI-assisted workflow creation in Deplao" width="360" />
+      <img src="./assets/workflow-ai.png" alt="AI-assisted workflow creation in Zalo-X" width="360" />
       <br />
       <sub><strong>AI workflow generation</strong></sub>
     </td>
     <td>
-      <img src="./assets/pos.png" alt="POS and sales integration in Deplao" width="360" />
+      <img src="./assets/pos.png" alt="POS and sales integration in Zalo-X" width="360" />
       <br />
       <sub><strong>POS, shipping & payments</strong></sub>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="./assets/report.jpg" alt="Reports and performance analytics in Deplao" width="360" />
+      <img src="./assets/report.jpg" alt="Reports and performance analytics in Zalo-X" width="360" />
       <br />
       <sub><strong>Reports & analytics</strong></sub>
     </td>
     <td>
-      <img src="./assets/report-employee.png" alt="Employee performance report in Deplao" width="360" />
+      <img src="./assets/report-employee.png" alt="Employee performance report in Zalo-X" width="360" />
       <br />
       <sub><strong>Employee reports</strong></sub>
     </td>
     <td>
-      <img src="./assets/erp.png" alt="Internal ERP and team operations in Deplao" width="360" />
+      <img src="./assets/erp.png" alt="Internal ERP and team operations in Zalo-X" width="360" />
       <br />
       <sub><strong>Internal ERP</strong></sub>
     </td>
@@ -438,7 +438,7 @@ Screens are ordered by typical usage flow: dashboard → chat → CRM → workfl
 
 ## 🔒 Security & data
 
-Deplao prioritizes a local-first architecture:
+Zalo-X prioritizes a local-first architecture:
 
 - All messages, contacts, CRM data, settings and media are stored on the user's machine
 - Login via QR Code — no Zalo password stored; cookies are encrypted on-device
@@ -454,11 +454,11 @@ Deplao prioritizes a local-first architecture:
 
 ## 📣 Contact & support
 
-- Bug reports, feature requests, questions: 👉 [Open an issue](https://github.com/babyvibe/deplao-builder/issues)
+- Bug reports, feature requests, questions: 👉 [Open an issue](https://github.com/adamwang99/Zalo-X/issues)
 
 ## 🙏 Acknowledgements
 
-Deplao would like to thank the project: 👉 https://github.com/RFS-ADRENO/zca-js
-Without the contributions and foundation from this project, Deplao would not have been possible. We deeply appreciate the value the open-source community brings 💙
+Zalo-X would like to thank the project: 👉 https://github.com/RFS-ADRENO/zca-js
+Without the contributions and foundation from this project, Zalo-X would not have been possible. We deeply appreciate the value the open-source community brings 💙
 
 ---

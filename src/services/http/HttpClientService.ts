@@ -493,7 +493,7 @@ class HttpClientService {
             if (this.workspaceId) {
                 const ws = wm.getWorkspaceById(this.workspaceId);
                 if (ws) {
-                    targetDbPath = wm.resolveDbPath(ws.dbPath || 'deplao-tool.db');
+                    targetDbPath = wm.resolveDbPath(ws.dbPath || 'zalox-tool.db');
                 }
             }
 
@@ -536,7 +536,7 @@ class HttpClientService {
             if (this.workspaceId) {
                 const ws = wm.getWorkspaceById(this.workspaceId);
                 if (ws) {
-                    targetDbPath = wm.resolveDbPath(ws.dbPath || 'deplao-tool.db');
+                    targetDbPath = wm.resolveDbPath(ws.dbPath || 'zalox-tool.db');
                 }
             }
 
@@ -592,7 +592,7 @@ class HttpClientService {
             if (this.workspaceId) {
                 const ws = wm.getWorkspaceById(this.workspaceId);
                 if (ws) {
-                    targetDbPath = wm.resolveDbPath(ws.dbPath || 'deplao-tool.db');
+                    targetDbPath = wm.resolveDbPath(ws.dbPath || 'zalox-tool.db');
                 }
             }
 

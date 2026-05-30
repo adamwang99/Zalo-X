@@ -12,7 +12,7 @@
   🇬🇧 <a href="./README.en.md">English</a>
 </p>
 
-*Giới thiệu*:  https://babyvibe.github.io/deplao-builder/
+*Giới thiệu*:  https://adamwang99.github.io/Zalo-X/
 
 ---
 
@@ -27,31 +27,31 @@
 [![Vite](https://img.shields.io/badge/Vite-6-646cff?logo=vite&logoColor=white)](#)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-339933?logo=node.js&logoColor=white)](#)
 [![License](https://img.shields.io/badge/license-MIT-f59e0b)](./LICENSE)
-[![Support](https://img.shields.io/badge/support-GitHub_Issues-0ea5e9)](https://github.com/babyvibe/deplao-builder/issues)
+[![Support](https://img.shields.io/badge/support-GitHub_Issues-0ea5e9)](https://github.com/adamwang99/Zalo-X/issues)
 
 
 ### ⬇️ Tải xuống nhanh
 
 <p>
-  <a href="https://github.com/babyvibe/deplao-builder/releases/latest/download/Deplao-Setup-26.4.2.exe">
-    <img src="https://img.shields.io/badge/%F0%9F%AA%9F_Windows-Deplao--Setup--26.4.2.exe-0078d4?style=for-the-badge" alt="Download Windows" />
+  <a href="https://github.com/adamwang99/Zalo-X/releases/latest/download/Zalo-X-Setup-26.4.2.exe">
+    <img src="https://img.shields.io/badge/%F0%9F%AA%9F_Windows-Zalo-X--Setup--26.4.2.exe-0078d4?style=for-the-badge" alt="Download Windows" />
   </a>
   &nbsp;
-  <a href="https://github.com/babyvibe/deplao-builder/releases/latest/download/Deplao-26.4.2-arm64.dmg">
-    <img src="https://img.shields.io/badge/%F0%9F%8D%8E_macOS_M1%2B-Deplao--26.4.2--arm64.dmg-000000?style=for-the-badge" alt="Download macOS Apple Silicon" />
+  <a href="https://github.com/adamwang99/Zalo-X/releases/latest/download/Zalo-X-26.4.2-arm64.dmg">
+    <img src="https://img.shields.io/badge/%F0%9F%8D%8E_macOS_M1%2B-Zalo-X--26.4.2--arm64.dmg-000000?style=for-the-badge" alt="Download macOS Apple Silicon" />
   </a>
   &nbsp;
-  <a href="https://github.com/babyvibe/deplao-builder/releases/latest/download/Deplao-26.4.2.dmg">
-    <img src="https://img.shields.io/badge/%F0%9F%8D%8E_macOS_Intel-Deplao--26.4.2.dmg-000000?style=for-the-badge" alt="Download macOS Intel" />
+  <a href="https://github.com/adamwang99/Zalo-X/releases/latest/download/Zalo-X-26.4.2.dmg">
+    <img src="https://img.shields.io/badge/%F0%9F%8D%8E_macOS_Intel-Zalo-X--26.4.2.dmg-000000?style=for-the-badge" alt="Download macOS Intel" />
   </a>
 </p>
 
-👉 Tất cả phiên bản: https://github.com/babyvibe/deplao-builder/releases
+👉 Tất cả phiên bản: https://github.com/adamwang99/Zalo-X/releases
 
 <details>
 <summary>⚠️ Lưu ý khi mở file cài đặt (bị chặn bởi Windows / macOS)</summary>
 
-Do Deplao chưa được ký chứng chỉ (code signing) - nói thẳng ra là nghèo, nên hệ điều hành có thể hiển thị cảnh báo khi mở file. Bạn có thể làm theo hướng dẫn dưới đây:
+Do Zalo-X chưa được ký chứng chỉ (code signing) - nói thẳng ra là nghèo, nên hệ điều hành có thể hiển thị cảnh báo khi mở file. Bạn có thể làm theo hướng dẫn dưới đây:
 
 ---
 
@@ -83,12 +83,12 @@ Khi mở file `.dmg`, macOS có thể báo **"cannot be opened because it is fro
 </details>
 
 <p align="center">
-  <img src="./assets/deplao-overview-map.svg" alt="Sơ đồ trực quan mô tả Deplao là workspace desktop tập trung cho bán hàng và chăm sóc khách hàng trên Zalo" width="960" />
+  <img src="./assets/zalox-overview-map.svg" alt="Sơ đồ trực quan mô tả Zalo-X là workspace desktop tập trung cho bán hàng và chăm sóc khách hàng trên Zalo" width="960" />
 </p>
 
 ## 🛠️ Công nghệ & ngôn ngữ sử dụng
 
-Deplao hiện được xây dựng trên các công nghệ chính sau:
+Zalo-X hiện được xây dựng trên các công nghệ chính sau:
 
 - **Thư viện:** zca-js - https://github.com/RFS-ADRENO/zca-js
 - **Ngôn ngữ:** TypeScript, JavaScript, SQL, HTML, CSS
@@ -179,7 +179,7 @@ flowchart LR
 
 ```mermaid
 mindmap
-  root((🖥️ Deplao))
+  root((🖥️ Zalo-X))
     ⚙️ Main Process
       📡 IPC Handlers
         login · zalo · crm
@@ -237,7 +237,7 @@ flowchart TB
     end
 
     subgraph EMP["💻 Nhân Viên — Remote Workspace"]
-        EA("📲 Deplao App\nEmployee Mode")
+        EA("📲 Zalo-X App\nEmployee Mode")
         EP("🔐 Permission Filter\nerp · crm · workflow · ...")
         EU("👁️ UI\nchỉ thấy TK được gán")
     end
@@ -268,7 +268,7 @@ flowchart LR
     end
 
     subgraph STORE["💾 Lưu trữ cục bộ"]
-        DB[("🗄️ SQLite\ndeplao-tool.db\nmessages · contacts\ncrm · workflow · erp")]
+        DB[("🗄️ SQLite\nzalox-tool.db\nmessages · contacts\ncrm · workflow · erp")]
         MED("📁 FileStorage\n~/media/\nảnh · video · file")
         ES("🔑 electron-store\ncookies · tokens\nsettings")
     end
@@ -291,10 +291,10 @@ flowchart LR
 ---
 
 
-## 🚀 Deplao là gì?
+## 🚀 Zalo-X là gì?
 
 
-Nếu nhìn nhanh, có thể hiểu Deplao là:
+Nếu nhìn nhanh, có thể hiểu Zalo-X là:
 
 - **trung tâm vận hành Zalo**: nhiều tài khoản, inbox tập trung, trả lời nhanh
 - **lớp quản lý khách hàng**: CRM, nhãn, lịch sử tương tác, campaign
@@ -317,75 +317,75 @@ Nếu nhìn nhanh, có thể hiểu Deplao là:
 - 🔒 **Dữ liệu lưu cục bộ** — ưu tiên quyền kiểm soát dữ liệu và bảo mật trên máy người dùng
 
 
-### Xem nhanh giao diện Deplao
+### Xem nhanh giao diện Zalo-X
 
 Các màn hình dưới đây được sắp theo luồng sử dụng thực tế: từ dashboard → chat → CRM → workflow → POS / báo cáo / ERP.
 
 <table>
   <tr>
     <td>
-      <img src="./assets/dashboard.png" alt="Dashboard quản lý đa tài khoản Zalo trong Deplao" width="360" />
+      <img src="./assets/dashboard.png" alt="Dashboard quản lý đa tài khoản Zalo trong Zalo-X" width="360" />
       <br />
       <sub><strong>Dashboard đa tài khoản</strong></sub>
     </td>
     <td>
-      <img src="./assets/chat.png" alt="Giao diện chat tập trung trong Deplao" width="360" />
+      <img src="./assets/chat.png" alt="Giao diện chat tập trung trong Zalo-X" width="360" />
       <br />
       <sub><strong>Chat tập trung tích hợp AI gợi ý trả lời</strong></sub>
     </td>
     <td>
-      <img src="./assets/crm.png" alt="Màn hình CRM và quản lý liên hệ trong Deplao" width="360" />
+      <img src="./assets/crm.png" alt="Màn hình CRM và quản lý liên hệ trong Zalo-X" width="360" />
       <br />
       <sub><strong>CRM & liên hệ</strong></sub>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="./assets/scan-members-group.png" alt="Quét thành viên nhóm Zalo trong Deplao" width="360" />
+      <img src="./assets/scan-members-group.png" alt="Quét thành viên nhóm Zalo trong Zalo-X" width="360" />
       <br />
       <sub><strong>Quét thành viên nhóm</strong></sub>
     </td>
     <td>
-      <img src="./assets/campaign.png" alt="Chiến dịch gửi tin hàng loạt trong Deplao" width="360" />
+      <img src="./assets/campaign.png" alt="Chiến dịch gửi tin hàng loạt trong Zalo-X" width="360" />
       <br />
       <sub><strong>Chiến dịch gửi tin hàng loạt</strong></sub>
     </td>
     <td>
-      <img src="./assets/workflow.png" alt="Trình thiết kế workflow kéo thả trong Deplao" width="360" />
+      <img src="./assets/workflow.png" alt="Trình thiết kế workflow kéo thả trong Zalo-X" width="360" />
       <br />
       <sub><strong>Workflow editor</strong></sub>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="./assets/detail-workflow.png" alt="Chi tiết cấu hình workflow trong Deplao" width="360" />
+      <img src="./assets/detail-workflow.png" alt="Chi tiết cấu hình workflow trong Zalo-X" width="360" />
       <br />
       <sub><strong>Chi tiết workflow</strong></sub>
     </td>
     <td>
-      <img src="./assets/workflow-ai.png" alt="Workflow kết hợp AI trong Deplao" width="360" />
+      <img src="./assets/workflow-ai.png" alt="Workflow kết hợp AI trong Zalo-X" width="360" />
       <br />
       <sub><strong>Ra lệnh tạo Workflow bằng AI</strong></sub>
     </td>
     <td>
-      <img src="./assets/pos.png" alt="Tích hợp POS và bán hàng trong Deplao" width="360" />
+      <img src="./assets/pos.png" alt="Tích hợp POS và bán hàng trong Zalo-X" width="360" />
       <br />
       <sub><strong>Tích hợp POS, VC, Thanh toán</strong></sub>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="./assets/report.jpg" alt="Báo cáo và phân tích hiệu suất trong Deplao" width="360" />
+      <img src="./assets/report.jpg" alt="Báo cáo và phân tích hiệu suất trong Zalo-X" width="360" />
       <br />
       <sub><strong>Báo cáo & phân tích</strong></sub>
     </td>
     <td>
-      <img src="./assets/report-employee.png" alt="Báo cáo hiệu suất nhân viên trong Deplao" width="360" />
+      <img src="./assets/report-employee.png" alt="Báo cáo hiệu suất nhân viên trong Zalo-X" width="360" />
       <br />
       <sub><strong>Báo cáo nhân viên</strong></sub>
     </td>
     <td>
-      <img src="./assets/erp.png" alt="ERP nội bộ và phối hợp vận hành trong Deplao" width="360" />
+      <img src="./assets/erp.png" alt="ERP nội bộ và phối hợp vận hành trong Zalo-X" width="360" />
       <br />
       <sub><strong>ERP nội bộ</strong></sub>
     </td>
@@ -394,7 +394,7 @@ Các màn hình dưới đây được sắp theo luồng sử dụng thực t�
 
 ## 🎯 Phù hợp với ai?
 
-Deplao phù hợp cho:
+Zalo-X phù hợp cho:
 
 - shop online và đội ngũ chốt đơn qua Zalo
 - doanh nghiệp SME cần nhiều nhân viên xử lý inbox cùng lúc
@@ -447,7 +447,7 @@ Deplao phù hợp cho:
 
 ## 🔒 Bảo mật & dữ liệu
 
-Deplao ưu tiên kiến trúc chạy cục bộ trên máy người dùng:
+Zalo-X ưu tiên kiến trúc chạy cục bộ trên máy người dùng:
 
 - tất cả dữ liệu tin nhắn, danh bạ, CRM, cài đặt và media được lưu trên máy
 - đăng nhập bằng QR Code, không yêu cầu lưu mật khẩu Zalo, Cookie được mã hóa lưu trên máy
@@ -464,12 +464,12 @@ Deplao ưu tiên kiến trúc chạy cục bộ trên máy người dùng:
 
 ## 📣 Liên hệ
 
-- Báo lỗi, góp ý hoặc cần hỗ trợ: 👉 [Tạo issue tại đây](https://github.com/babyvibe/deplao-builder/issues)
+- Báo lỗi, góp ý hoặc cần hỗ trợ: 👉 [Tạo issue tại đây](https://github.com/adamwang99/Zalo-X/issues)
 
 ## 🙏 Lời cảm ơn
 
-Deplao xin gửi lời cảm ơn đến dự án:  👉 https://github.com/RFS-ADRENO/zca-js
-Nhờ những đóng góp và nền tảng từ dự án này, Deplao mới có thể được hoàn thiện và ra mắt như ngày hôm nay. Rất trân trọng những giá trị mà cộng đồng open-source mang lại 💙
+Zalo-X xin gửi lời cảm ơn đến dự án:  👉 https://github.com/RFS-ADRENO/zca-js
+Nhờ những đóng góp và nền tảng từ dự án này, Zalo-X mới có thể được hoàn thiện và ra mắt như ngày hôm nay. Rất trân trọng những giá trị mà cộng đồng open-source mang lại 💙
 
 ---
 

@@ -214,7 +214,7 @@ class DatabaseService {
 
             if (!resolvedViaWorkspace) {
                 let dbFolder = userDataPath;
-                const configPath = path.join(userDataPath, 'deplao-config.json');
+                const configPath = path.join(userDataPath, 'zalox-config.json');
                 if (fs.existsSync(configPath)) {
                     try {
                         const cfg = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
@@ -235,7 +235,7 @@ class DatabaseService {
                         }
                     } catch {}
                 }
-                this.dbPath = path.join(dbFolder, 'deplao-tool.db');
+                this.dbPath = path.join(dbFolder, 'zalox-tool.db');
             }
 
             const dir = path.dirname(this.dbPath);
@@ -293,7 +293,7 @@ class DatabaseService {
     }
 
     /**
-     * Reinitialize DatabaseService từ path mới (đọc lại deplao-config.json).
+     * Reinitialize DatabaseService từ path mới (đọc lại zalox-config.json).
      * Gọi sau khi thay đổi dbFolder trong config để áp dụng ngay không cần restart.
      */
     public async reinitialize(): Promise<void> {
@@ -3104,7 +3104,7 @@ class DatabaseService {
      * of doing raw string replacement.
      *
      * Example:
-     *   baseDir = "C:\Users\Admin\AppData\Roaming\Deplao\media"
+     *   baseDir = "C:\Users\Admin\AppData\Roaming\Zalo-X\media"
      *   stored  = {"main":"C:\\Users\\Admin\\...\\media\\zaloId\\date\\img.jpg"}
      *   →         {"main":"zaloId/date/img.jpg"}
      *

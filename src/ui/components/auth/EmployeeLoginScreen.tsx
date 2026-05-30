@@ -29,7 +29,7 @@ export default function EmployeeLoginScreen({ onBossMode, onEmployeeConnected }:
     // Load saved values from localStorage
     useEffect(() => {
         try {
-            const saved = localStorage.getItem('deplao_employee_login');
+            const saved = localStorage.getItem('zalox_employee_login');
             if (saved) {
                 const data = JSON.parse(saved);
                 if (data.bossIp) setBossIp(data.bossIp);
@@ -74,7 +74,7 @@ export default function EmployeeLoginScreen({ onBossMode, onEmployeeConnected }:
             await ipc.employee?.setMode('employee');
 
             // Save for next time
-            localStorage.setItem('deplao_employee_login', JSON.stringify({
+            localStorage.setItem('zalox_employee_login', JSON.stringify({
                 bossIp: bossIp.trim(),
                 bossPort: bossPort.trim(),
                 username: username.trim(),
@@ -157,7 +157,7 @@ export default function EmployeeLoginScreen({ onBossMode, onEmployeeConnected }:
             <div className="flex-1 flex items-center justify-center bg-gray-900 p-4">
                 <div className="w-full max-w-md bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl overflow-hidden">
                     <div className="px-6 pt-6 pb-4 text-center">
-                        <h1 className="text-xl font-bold text-white mb-1">Deplao</h1>
+                        <h1 className="text-xl font-bold text-white mb-1">Zalo-X</h1>
                         <p className="text-sm text-gray-400">Đồng bộ dữ liệu</p>
                     </div>
 
@@ -195,7 +195,7 @@ export default function EmployeeLoginScreen({ onBossMode, onEmployeeConnected }:
                     </div>
 
                     <div className="px-6 py-3 border-t border-gray-700/50 text-center">
-                        <p className="text-[10px] text-gray-600">Deplao — Quản lý Zalo đa tài khoản</p>
+                        <p className="text-[10px] text-gray-600">Zalo-X — Quản lý Zalo đa tài khoản</p>
                     </div>
                 </div>
             </div>
@@ -208,7 +208,7 @@ export default function EmployeeLoginScreen({ onBossMode, onEmployeeConnected }:
             <div className="w-full max-w-md bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl overflow-hidden">
                 {/* Header */}
                 <div className="px-6 pt-6 pb-4 text-center">
-                    <h1 className="text-xl font-bold text-white mb-1">Deplao</h1>
+                    <h1 className="text-xl font-bold text-white mb-1">Zalo-X</h1>
                     <p className="text-sm text-gray-400">Chọn chế độ đăng nhập</p>
                 </div>
 
@@ -314,7 +314,7 @@ export default function EmployeeLoginScreen({ onBossMode, onEmployeeConnected }:
 
                 {/* Footer */}
                 <div className="px-6 py-3 border-t border-gray-700/50 text-center">
-                    <p className="text-[10px] text-gray-600">Deplao — Quản lý Zalo đa tài khoản</p>
+                    <p className="text-[10px] text-gray-600">Zalo-X — Quản lý Zalo đa tài khoản</p>
                 </div>
             </div>
         </div>

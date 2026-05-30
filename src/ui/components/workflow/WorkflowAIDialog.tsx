@@ -27,7 +27,7 @@ function buildSystemPrompt(currentNodes: any[], currentEdges: any[]): string {
   const catalog = buildNodeCatalog();
   const currentWf = JSON.stringify({ nodes: currentNodes, edges: currentEdges }, null, 2);
 
-  return `Bạn là trợ lý AI chuyên xây dựng Workflow tự động cho phần mềm Deplao (quản lý Zalo).
+  return `Bạn là trợ lý AI chuyên xây dựng Workflow tự động cho phần mềm Zalo-X (quản lý Zalo).
 Nhiệm vụ: Dựa trên yêu cầu của người dùng, trả về JSON chứa danh sách nodes và edges cần THÊM vào workflow hiện tại.
 
 ## QUY TẮC QUAN TRỌNG:

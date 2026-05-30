@@ -80,8 +80,8 @@
     "zustand": "^5.0.12"
   },
   "build": {
-    "appId": "com.Deplao.app",
-    "productName": "Deplao",
+    "appId": "com.zalox.app",
+    "productName": "Zalo-X",
     "forceCodeSigning": false,
     "directories": {
       "output": "dist-electron-build"
@@ -123,7 +123,7 @@
       "gatekeeperAssess": false
     },
     "dmg": {
-      "title": "Deplao"
+      "title": "Zalo-X"
     },
     "linux": {
       "target": ["AppImage", "deb"],
