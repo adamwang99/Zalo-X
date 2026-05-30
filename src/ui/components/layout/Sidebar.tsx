@@ -83,7 +83,7 @@ export default function Sidebar({ onAddAccount }: SidebarProps) {
   };
 
   return (
-    <div className="flex flex-col w-16 bg-gray-900 border-r border-gray-700 h-full">
+    <div className="flex flex-col w-16 h-full" style={{ background: 'linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.02))', borderRight: '1px solid var(--glass-line)', backdropFilter: 'blur(16px) saturate(150%)', WebkitBackdropFilter: 'blur(16px) saturate(150%)' }}>
       {/* Danh sách tài khoản — chế độ Gộp trang: hiện các avatar dùng làm bộ lọc */}
       {mergedInboxMode ? (
         <div className="flex-1 overflow-y-auto py-2 flex flex-col items-center gap-2">

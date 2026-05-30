@@ -11,7 +11,11 @@
     "build:renderer": "vite build",
     "production": "tsc -p tsconfig.electron.prod.json && npm run build:renderer && electron-builder --publish never"
   },
-  "author": "https://github.com/babyvibe",
+  "author": {
+    "name": "Adam Wang",
+    "email": "adamwang99@users.noreply.github.com",
+    "url": "https://github.com/adamwang99"
+  },
   "license": "MIT",
   "dependencies": {
     "axios": "^1.7.8",

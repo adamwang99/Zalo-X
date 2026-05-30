@@ -4,8 +4,22 @@
 
 /* ── CSS Variables — dark theme defaults ───────────────────────────────────── */
 :root {
-  --color-sidebar: #1a1a2e;
-  --color-sidebar-hover: #16213e;
+  color-scheme: dark;
+  /* Legacy sidebar vars (giữ tương thích component cũ) */
+  --color-sidebar: rgba(20, 26, 46, 0.72);
+  --color-sidebar-hover: rgba(22, 33, 62, 0.85);
+  /* AI-World palette */
+  --aiw-accent: #9f8cff;
+  --aiw-accent-2: #67ddff;
+  --aiw-danger: #ff8da1;
+  --aiw-warning: #ffcf66;
+  --aiw-text: #f8fbff;
+  --aiw-muted: rgba(238, 242, 255, 0.72);
+  /* Glass surfaces */
+  --glass-bg: rgba(255, 255, 255, 0.105);
+  --glass-strong: rgba(255, 255, 255, 0.16);
+  --glass-line: rgba(255, 255, 255, 0.22);
+  --glass-inner: rgba(255, 255, 255, 0.20);
 }
 
 @layer base {
@@ -15,12 +29,19 @@
   body {
     margin: 0;
     padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background-color: #1a1a2e;
-    color: #e2e8f0;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--aiw-text);
     overflow: hidden;
     -webkit-user-select: text;
     user-select: text;
+    background:
+      radial-gradient(circle at 18% 10%, rgba(255,255,255,.10), transparent 9%),
+      radial-gradient(circle at 12% 18%, rgba(94,208,255,.30), transparent 32%),
+      radial-gradient(circle at 82% 8%, rgba(159,140,255,.34), transparent 34%),
+      radial-gradient(circle at 80% 82%, rgba(255,141,161,.20), transparent 36%),
+      radial-gradient(circle at 20% 92%, rgba(255,207,102,.12), transparent 30%),
+      linear-gradient(145deg, #0b1020 0%, #141a2e 38%, #090b12 70%, #17111f 100%);
+    background-attachment: fixed;
   }
   ::-webkit-scrollbar {
     width: 6px;
@@ -30,23 +51,44 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    background: #4a5568;
+    background: rgba(159,140,255,.42);
     border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #718096;
+    background: rgba(103,221,255,.62);
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply text-white px-4 py-2 rounded-xl font-semibold transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed;
+    background: linear-gradient(135deg, rgba(159,140,255,.95), rgba(103,221,255,.78));
+    border: 1px solid rgba(255,255,255,.30);
+    box-shadow: 0 12px 28px rgba(103,221,255,.22), 0 6px 16px rgba(159,140,255,.16), inset 0 1px 0 rgba(255,255,255,.28);
+  }
+  .btn-primary:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 34px rgba(103,221,255,.30), 0 8px 20px rgba(159,140,255,.22), inset 0 1px 0 rgba(255,255,255,.34);
   }
   .btn-secondary {
-    @apply bg-gray-700 hover:bg-gray-600 text-gray-200 px-4 py-2 rounded-lg font-medium transition-colors duration-150;
+    @apply text-gray-100 px-4 py-2 rounded-xl font-semibold transition-all duration-150;
+    background: linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,.08));
+    border: 1px solid rgba(255,255,255,.18);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 10px 24px rgba(0,0,0,.20);
+  }
+  .btn-secondary:hover {
+    background: linear-gradient(180deg, rgba(255,255,255,.24), rgba(255,255,255,.12));
+    transform: translateY(-1px);
   }
   .input-field {
-    @apply w-full bg-gray-800 border border-gray-600 rounded-lg px-3 py-2 text-gray-200 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500;
+    @apply w-full rounded-xl px-3 py-2 text-gray-100 placeholder-gray-400 focus:outline-none transition-colors;
+    background: rgba(255,255,255,.10);
+    border: 1px solid rgba(255,255,255,.18);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.14);
+  }
+  .input-field:focus {
+    border-color: rgba(103,221,255,.58);
+    box-shadow: 0 0 0 3px rgba(103,221,255,.12), inset 0 1px 0 rgba(255,255,255,.18);
   }
 
   .task-editor-select {
@@ -955,3 +997,37 @@ html[data-theme="light"] .hover\:bg-white\/20:hover  { background-color: rgba(24
 .text-white-important {
   color: #fff !important;
 }
+
+/* ── AI-World glass utilities — dùng lại cho mọi panel/card ─────────────────── */
+.aiw-glass {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255,255,255,.16), rgba(255,255,255,.07));
+  border: 1px solid var(--glass-line);
+  border-radius: 20px;
+  backdrop-filter: blur(18px) saturate(155%);
+  -webkit-backdrop-filter: blur(18px) saturate(155%);
+  box-shadow:
+    0 18px 48px rgba(0,0,0,.40),
+    0 8px 22px rgba(0,0,0,.20),
+    inset 0 1px 0 rgba(255,255,255,.30),
+    inset 0 -1px 0 rgba(255,255,255,.07);
+}
+.aiw-glass-subtle {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+}
+.aiw-pill {
+  border-radius: 999px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.16);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.16);
+}
+.aiw-accent-text { color: var(--aiw-accent); }
+.aiw-glow {
+  box-shadow: 0 0 20px rgba(103,221,255,.42), 0 0 52px rgba(159,140,255,.22);
+}
+/* Nhẹ nhàng đẩy các shell nền đặc cũ sang trong suốt để lộ gradient AI-World */
+.bg-gray-900\/aiw, .aiw-shell { background: transparent !important; }

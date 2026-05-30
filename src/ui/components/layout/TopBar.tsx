@@ -141,11 +141,11 @@ export default function TopBar() {
 
   return (
     <div
-      className="flex items-center justify-between h-9 bg-gray-900 border-b border-gray-700 flex-shrink-0"
-      style={{ WebkitAppRegion: 'drag' } as any}
+      className="flex items-center justify-between h-9 flex-shrink-0"
+      style={{ WebkitAppRegion: 'drag', background: 'linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03))', borderBottom: '1px solid var(--glass-line)', backdropFilter: 'blur(16px) saturate(150%)', WebkitBackdropFilter: 'blur(16px) saturate(150%)' } as any}
     >
       <div className="flex items-center gap-2 px-3" style={{ WebkitAppRegion: 'no-drag' } as any}>
-        <span className="text-blue-400 font-bold text-sm">Zalo-X</span>
+        <span className="font-bold text-sm" style={{ background: 'linear-gradient(135deg, #9f8cff, #67ddff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Zalo-X</span>
         <span className="text-gray-500 text-xs">v{APP_VERSION}</span>
 
         {/* Workspace switcher — only shows when multiple workspaces exist */}
